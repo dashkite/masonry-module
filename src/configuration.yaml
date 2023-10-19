@@ -1,0 +1,8 @@
+graphene:
+  db: drn:graphene/dashkite/guardian
+dynamodb:
+  tables:
+    db: drn:table/graphene/beta-db
+    collection: drn:table/graphene/beta-collection
+    prefix: drn:name/graphene/beta
+domain: drn:domain/modules/dashkite/com

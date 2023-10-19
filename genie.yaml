@@ -1,0 +1,14 @@
+coffee:
+  targets:
+    - node
+
+sky:
+  graphene:
+    tables:
+      db: drn:table/graphene/beta-db
+      collection: drn:table/graphene/beta-collection
+      prefix: drn:name/graphene/beta
+    databases:
+      - uri: drn:graphene/dashkite/guardian
+        collections:
+          - uri: drn:domain/dashkite/modules/com
