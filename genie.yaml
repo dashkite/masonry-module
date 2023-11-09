@@ -3,12 +3,11 @@ coffee:
     - node
 
 sky:
-  graphene:
-    tables:
-      db: drn:table/graphene/beta-db
-      collection: drn:table/graphene/beta-collection
-      prefix: drn:name/graphene/beta
-    databases:
-      - uri: drn:graphene/dashkite/guardian
-        collections:
-          - uri: drn:domain/dashkite/modules/com
+  s3: 
+    - drn: drn:domain/modules/dashkite/com
+      public: true
+  yaml:
+    targets:
+      node:
+        - preset: js
+          glob: "src/**/*.yaml"

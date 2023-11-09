@@ -34,11 +34,10 @@
     "@dashkite/assert": "^0.1.4",
     "@dashkite/genie": "link:../genie",
     "@dashkite/genie-coffee": "link:../genie-coffee",
-    "@dashkite/genie-yaml": "link:../genie-yaml"
+    "@dashkite/genie-sky": "link:../genie-sky"
   },
   "dependencies": {
-    "@dashkite/drn-sky": "link:../drn-sky",
-    "@dashkite/graphene-core": "link:../graphene-core",
+    "@dashkite/dolores": "link:../dolores",
     "@dashkite/joy": "link:../joy",
     "@dashkite/zephyr": "link:../zephyr",
     "terminal-kit": "^3.0.1"

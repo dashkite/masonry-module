@@ -5,12 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@dashkite/drn-sky':
-    specifier: link:../drn-sky
-    version: link:../drn-sky
-  '@dashkite/graphene-core':
-    specifier: link:../graphene-core
-    version: link:../graphene-core
+  '@dashkite/dolores':
+    specifier: link:../dolores
+    version: link:../dolores
   '@dashkite/joy':
     specifier: link:../joy
     version: link:../joy
@@ -37,9 +34,9 @@ devDependencies:
   '@dashkite/genie-coffee':
     specifier: link:../genie-coffee
     version: link:../genie-coffee
-  '@dashkite/genie-yaml':
-    specifier: link:../genie-yaml
-    version: link:../genie-yaml
+  '@dashkite/genie-sky':
+    specifier: link:../genie-sky
+    version: link:../genie-sky
 
 packages:
 

@@ -1,7 +1,9 @@
 import Path from "node:path"
 import * as Fn from "@dashkite/joy/function"
 import Zephyr from "@dashkite/zephyr"
-import { log, getCollection, Template, hash } from "./helpers"
+import { log, Template, hash } from "./helpers"
+import * as S3 from "@dashkite/dolores/s3"
+import configuration from "./configuration"
 
 $hashes = Path.join ".sky", "hashes.yaml"
 
@@ -13,17 +15,16 @@ Module =
 
   publish: ( template ) ->
     Fn.tee ( context ) ->
-      collection = await getCollection()
       key = Template.expand template, context
       log "publishing #{ context.source.path }"
-      collection.put key, context.input
+      S3.putObject configuration.domain, key, context.input
 
   rm: ( template ) ->
     Fn.tee ( context ) ->
       collection = await getCollection()
       key = Template.expand template, context
       log "delete #{ context.source.path }"
-      collection.delete key
+      S3.deleteObject configuration.domain, key
 
 File =
 
