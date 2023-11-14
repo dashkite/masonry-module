@@ -4,7 +4,7 @@ coffee:
 
 sky:
   s3: 
-    - drn: drn:domain/modules/dashkite/com
+    - domain: drn:domain/modules/dashkite/com
       public: true
   yaml:
     targets:
