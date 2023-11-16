@@ -5,7 +5,10 @@ coffee:
 sky:
   s3: 
     - domain: drn:domain/modules/dashkite/com
-      public: true
+      # public: true
+      website:
+        index: index.html
+        error: index.html
   yaml:
     targets:
       node:
