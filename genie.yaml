@@ -5,7 +5,7 @@ coffee:
 sky:
   s3: 
     - domain: drn:domain/modules/dashkite/com
-      # public: true
+      cors: true
       website:
         index: index.html
         error: index.html
