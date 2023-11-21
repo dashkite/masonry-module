@@ -2,7 +2,7 @@ import Crypto from "node:crypto"
 import * as TK from "terminal-kit"
 
 log = ( text ) ->
-  TK.terminal.blue "genie-modules: #{ text }\n"
+  TK.terminal.green "genie-modules: #{ text }\n"
 
 Template =
 
