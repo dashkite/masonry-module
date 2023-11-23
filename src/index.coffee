@@ -2,6 +2,7 @@ import Path from "node:path"
 import * as Fn from "@dashkite/joy/function"
 import Zephyr from "@dashkite/zephyr"
 import { log, Template, hash } from "./helpers"
+import * as X3 from "@dashkite/dolores/s3-combinators"
 import * as S3 from "@dashkite/dolores/s3"
 import configuration from "./configuration"
 
@@ -17,7 +18,14 @@ Module =
     Fn.tee ( context ) ->
       key = Template.expand template, context
       log "publishing #{ context.source.path }"
-      S3.putObject configuration.domain, key, context.input
+      do Fn.pipe [
+        X3.bucket configuration.domain
+        X3.key key
+        X3.body context.input
+        # cache forever because path includes content hash
+        X3.cache "public, max-age=31536000"
+        X3.put
+      ]
 
   rm: ( template ) ->
     Fn.tee ( context ) ->

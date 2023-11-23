@@ -2,6 +2,14 @@ coffee:
   targets:
     - node
 
+drn:
+
+  yaml:
+    targets:
+      node:
+        - preset: js
+          glob: "src/**/*.yaml"
+
 sky:
   s3: 
     - domain: drn:domain/modules/dashkite/com
@@ -9,8 +17,3 @@ sky:
       website:
         index: index.html
         error: index.html
-  yaml:
-    targets:
-      node:
-        - preset: js
-          glob: "src/**/*.yaml"
