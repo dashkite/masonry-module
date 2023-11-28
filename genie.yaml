@@ -4,6 +4,9 @@ coffee:
 
 drn:
 
+  resolvers:
+    - "@dashkite/drn-sky"
+
   yaml:
     targets:
       node:

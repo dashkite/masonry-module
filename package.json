@@ -26,12 +26,13 @@
   ],
   "scripts": {
     "test": "genie test",
-    "build": "genie build"
+    "build": "genie build -x sky"
   },
   "devDependencies": {
     "@dashkite/amen": "^0.2.0",
     "@dashkite/amen-console": "^0.0.2",
     "@dashkite/assert": "^0.1.4",
+    "@dashkite/drn-sky": "link:../drn-sky",
     "@dashkite/genie": "link:../genie",
     "@dashkite/genie-coffee": "link:../genie-coffee",
     "@dashkite/genie-sky": "link:../genie-sky",
@@ -39,7 +40,7 @@
   },
   "dependencies": {
     "@dashkite/dolores": "link:../dolores",
-    "@dashkite/joy": "link:../joy",
+    "@dashkite/joy": "^0.3.16",
     "@dashkite/zephyr": "link:../zephyr",
     "terminal-kit": "^3.0.1"
   }
