@@ -1,22 +1,3 @@
 coffee:
   targets:
     - node
-
-drn:
-
-  resolvers:
-    - "@dashkite/drn-sky"
-
-  yaml:
-    targets:
-      node:
-        - preset: js
-          glob: "src/**/*.yaml"
-
-sky:
-  s3: 
-    - domain: drn:domain/modules/dashkite/com
-      cors: true
-      website:
-        index: index.html
-        error: index.html

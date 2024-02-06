@@ -4,9 +4,9 @@ import Zephyr from "@dashkite/zephyr"
 import { log, Template, hash } from "./helpers"
 import * as X3 from "@dashkite/dolores/s3-combinators"
 import * as S3 from "@dashkite/dolores/s3"
-import configuration from "./configuration"
 
 $hashes = Path.join ".sky", "hashes.yaml"
+
 
 Module =
 
@@ -14,27 +14,30 @@ Module =
     data = await Zephyr.read "package.json"
     context.module = data
 
-  publish: ( template ) ->
+File =
+
+  publish: ({ template, bucket, cache }) ->
     Fn.tee ( context ) ->
-      key = Template.expand template, context
       log "publishing #{ context.source.path }"
+      key = if template?
+        Template.expand template, context
+      else context.source.path
       do Fn.pipe [
-        X3.bucket configuration.domain
+        X3.bucket bucket
         X3.key key
         X3.body context.input
-        # cache forever because path includes content hash
-        X3.cache "public, max-age=31536000"
+        X3.cache cache
         X3.put
       ]
 
-  rm: ( template ) ->
+  rm: ({ template, bucket }) ->
     Fn.tee ( context ) ->
       collection = await getCollection()
-      key = Template.expand template, context
+      key = if template?
+        Template.expand template, context
+      else context.source.path
       log "delete #{ context.source.path }"
-      S3.deleteObject configuration.domain, key
-
-File =
+      S3.deleteObject bucket, key
 
   hash: Fn.tee ({ source, input }) ->
     if input?

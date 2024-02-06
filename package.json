@@ -32,11 +32,8 @@
     "@dashkite/amen": "^0.2.0",
     "@dashkite/amen-console": "^0.0.2",
     "@dashkite/assert": "^0.1.4",
-    "@dashkite/drn-sky": "link:../drn-sky",
     "@dashkite/genie": "^0.7.3",
-    "@dashkite/genie-coffee": "link:../genie-coffee",
-    "@dashkite/genie-sky": "link:../genie-sky",
-    "@dashkite/genie-yaml-drn": "link:../genie-yaml-drn"
+    "@dashkite/genie-coffee": "link:../genie-coffee"
   },
   "dependencies": {
     "@dashkite/dolores": "link:../dolores",

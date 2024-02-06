@@ -28,21 +28,12 @@ devDependencies:
   '@dashkite/assert':
     specifier: ^0.1.4
     version: 0.1.4
-  '@dashkite/drn-sky':
-    specifier: link:../drn-sky
-    version: link:../drn-sky
   '@dashkite/genie':
     specifier: ^0.7.3
     version: 0.7.3
   '@dashkite/genie-coffee':
     specifier: link:../genie-coffee
     version: link:../genie-coffee
-  '@dashkite/genie-sky':
-    specifier: link:../genie-sky
-    version: link:../genie-sky
-  '@dashkite/genie-yaml-drn':
-    specifier: link:../genie-yaml-drn
-    version: link:../genie-yaml-drn
 
 packages:
 
