@@ -1,12 +1,12 @@
 import Path from "node:path"
 import * as Fn from "@dashkite/joy/function"
 import Zephyr from "@dashkite/zephyr"
-import { log, Template, hash } from "./helpers"
+import { Template, hash } from "./helpers"
 import * as X3 from "@dashkite/dolores/s3-combinators"
 import * as S3 from "@dashkite/dolores/s3"
+import log from "@dashkite/kaiko"
 
 $hashes = Path.join ".sky", "hashes.yaml"
-
 
 Module =
 
@@ -18,7 +18,7 @@ File =
 
   publish: ({ template, bucket, cache }) ->
     Fn.tee ( context ) ->
-      log "publishing #{ context.source.path }"
+      log.info "Publishing [ #{ context.source.path } ]"
       key = if template?
         Template.expand template, context
       else context.source.path
@@ -36,7 +36,7 @@ File =
       key = if template?
         Template.expand template, context
       else context.source.path
-      log "delete #{ context.source.path }"
+      log.info "Deleting [ #{ context.source.path } ]"
       S3.deleteObject bucket, key
 
   hash: Fn.tee ({ source, input }) ->

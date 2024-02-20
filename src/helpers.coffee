@@ -1,8 +1,4 @@
 import Crypto from "node:crypto"
-import * as TK from "terminal-kit"
-
-log = ( text ) ->
-  TK.terminal.green "masonry-module: #{ text }\n"
 
 Template =
 
