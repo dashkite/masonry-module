@@ -65,4 +65,7 @@ File =
         # explicit await since we return the context
         await action context
 
+  reset: ->
+    Zephyr.update $hashes, -> {}
+
 export { Module, File }
