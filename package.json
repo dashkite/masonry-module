@@ -39,7 +39,7 @@
   "dependencies": {
     "@dashkite/dolores": "link:../dolores",
     "@dashkite/joy": "^0.3.16",
-    "@dashkite/kaiko": "link:../kaiko",
+    "@dashkite/kaiko": "^0.3.3",
     "@dashkite/zephyr": "link:../zephyr"
   }
 }

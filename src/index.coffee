@@ -32,6 +32,7 @@ File =
 
   rm: ({ template, bucket }) ->
     Fn.tee ( context ) ->
+      # TODO define getCollection
       collection = await getCollection()
       key = if template?
         Template.expand template, context

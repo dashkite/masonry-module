@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.3.16
     version: 0.3.16
   '@dashkite/kaiko':
-    specifier: link:../kaiko
-    version: link:../kaiko
+    specifier: ^0.3.3
+    version: 0.3.3
   '@dashkite/zephyr':
     specifier: link:../zephyr
     version: link:../zephyr
@@ -80,7 +80,6 @@ packages:
 
   /@dashkite/kaiko@0.3.3:
     resolution: {integrity: sha512-XnAvVr9y2MsDqMLr4A24vkLF7Iuq3E8RjHEEpqhe29P5NevVX9jXKcXUStNMp9MSJbjHd2pqUNiM5Vvdja9ggg==}
-    dev: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
