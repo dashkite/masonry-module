@@ -2,7 +2,6 @@ import Crypto from "node:crypto"
 
 Template =
 
-  # TODO migrate into Joy
   expand: ( template, context ) ->
     parameters = Object.keys context
     f = new Function "{#{ parameters }}", "return `#{ template }`"
